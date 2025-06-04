@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Imagem / Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma">
+        </div>
+
+        <!-- Seção do Formulário (Menu Principal) -->
+        <div class="form-section">
+            <h1>Menu</h1>
+
+            <div class="menu-buttons">
+                <button id="btn-saldo">💼 Saldo</button>
+                <button id="btn-saque">💸 Saque</button>
+                <button id="btn-deposito">💰 Depósito</button>
+                <button id="btn-extrato">📊 Extrato</button>
+                <button id="btn-transferencia">💳 Transferência</button>
+                <button id="btn-poupanca">🏦 Poupança</button>
+            </div>
+
+            <!-- Botão Voltar ao Login com espaçamento -->
+            <div class="menu-buttons" style="margin-top: 20px;">
+                <button id="btn-voltar-login">🔙 Sair da Conta</button>
+            </div>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+            <!-- VLibras container -->
+        <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+            <!-- VLibras script -->
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+    <script src="menu.js"></script>
+</body>
+</html>

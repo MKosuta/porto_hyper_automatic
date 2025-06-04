@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Imagem / Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma">
+        </div>
+
+        <!-- Seção do Formulário (Depósito) -->
+        <div class="form-section">
+            <h1>Depósito</h1>
+            <form id="deposit-form">
+                <div class="input-box">
+                    <label for="valor-deposito">Valor do Depósito:</label>
+                    <input type="text" id="valor-deposito" name="valor-deposito" placeholder="R$ 0,00" required>
+                </div>
+                <div class="actions">
+                    <button type="submit">Confirmar Depósito</button>
+                </div>
+                <!-- Botão Voltar ao Menu -->
+                <div class="actions">
+                    <button type="button" id="btn-voltar-menu">🔙 Voltar ao Menu</button>
+                </div>
+            </form>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="deposito.js"></script>
+</body>
+</html>

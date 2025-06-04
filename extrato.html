@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Imagem / Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma">
+        </div>
+
+        <!-- Seção do Extrato -->
+        <div class="form-section">
+            <h1>Extrato</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/05/2025</td>
+                        <td>Depósito</td>
+                        <td>R$ 500,00</td>
+                    </tr>
+                    <tr>
+                        <td>05/05/2025</td>
+                        <td>Saque</td>
+                        <td>R$ 200,00</td>
+                    </tr>
+                    <tr>
+                        <td>10/05/2025</td>
+                        <td>Depósito</td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                    <!-- Mais transações podem ser adicionadas aqui -->
+                </tbody>
+            </table>
+
+            <!-- Ações -->
+            <div class="actions">
+               
+                <button onclick="window.location.href='menu.html'" style="margin-top: 10px;">🔙 Voltar ao Menu</button> <!-- Espaço adicionado -->
+            </div>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="extrato.js"></script>
+</body>
+</html>

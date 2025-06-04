@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saque</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Imagem / Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma">
+        </div>
+
+        <!-- Seção do Formulário (Saque) -->
+        <div class="form-section">
+            <h1>Saque</h1>
+            <form id="saque-form">
+                <div class="input-box">
+                    <label for="valor-saque">Valor do Saque:</label>
+                    <input type="text" id="valor-saque" name="valor-saque" placeholder="R$ 0,00" required>
+                </div>
+                <div class="actions">
+                    <button type="submit">Confirmar Saque</button>
+                </div>
+            </form>
+
+            <!-- Botão Voltar ao Menu -->
+            <div class="actions" style="margin-top: 20px;">
+                <button id="btn-voltar-menu">🔙 Voltar ao Menu</button>
+            </div>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="saque.js"></script>
+</body>
+</html>

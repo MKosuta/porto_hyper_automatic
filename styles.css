@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #010326, #23338c, #2e40a6, #404040);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: table-column;
+    width: 900px;
+    background-color: rgba(230, 230, 230, 0.98);
+    border-radius: 12px;
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23338c;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 40%;
+    height: auto;
+}
+
+.form-section {
+    flex: 2;
+    padding: 40px;
+    background-color: #e6e6e6;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #23338c;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #23338c;
+    font-weight: bold;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #23338c;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.input-box input:focus {
+    border-color: #2e40a6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(147, 5, 242, 0.5);
+}
+
+.senha-contagem {
+    font-size: 14px;
+    color: #23338c;
+    margin-left: 10px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    width: 100%;
+    background-color: #23338c;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #2e40a6;
+}
+
+.accessibility {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.accessibility button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #23338c;
+    color: white;
+    cursor: pointer;
+}
+
+.accessibility button:hover {
+    background-color: #2e40a6;
+}
+
+/* 🌙 Modo de alto contraste */
+.contraste-ativo {
+    background-color: #2a2a2a;
+    color: #f2f2f2;
+}
+
+.contraste-ativo .container {
+    background-color: #3a3a3a;
+}
+
+.contraste-ativo h1 {
+    color: #D8B923;
+}
+
+.contraste-ativo .input-box label,
+.contraste-ativo .input-box input {
+    color: #f2f2f2;
+    background-color: #555;
+}
+
+.contraste-ativo .actions button {
+    background-color: #D8B923;
+    color: #333;
+}
+
+.contraste-ativo .actions button:hover {
+    background-color: #C6A417;
+}
+
+.contraste-ativo .accessibility button {
+    background-color: #D8B923;
+    color: #333;
+}
+
+.contraste-ativo .accessibility button:hover {
+    background-color: #C6A417;
+}
+
+.contraste-ativo .form-section,
+.contraste-ativo .saque-container,
+.contraste-ativo .image-section,
+.contraste-ativo .menu-container {
+    background-color: #3a3a3a !important;
+    color: #dcdcdc !important;
+}
+
+.contraste-ativo .input-box input {
+    background-color: #555555 !important;
+    color: #dcdcdc !important;
+    border-color: #888 !important;
+}
+
+.contraste-ativo .image-section img {
+    filter: grayscale(100%) brightness(1.2);
+}
+
+/* 📑 Estilos para a tabela do extrato - IDÊNTICOS AO SAQUE E DEPÓSITO */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #23338c;
+    color: white;
+}
+
+thead th,
+tbody td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.contraste-ativo table thead {
+    background-color: #D8B923;
+    color: #333;
+}
+
+.contraste-ativo tbody tr:nth-child(even) {
+    background-color: #4a4a4a;
+}
+
+.contraste-ativo tbody tr:nth-child(odd) {
+    background-color: #333;
+}
+
+.contraste-ativo tbody td {
+    border-color: #999;
+}
+
+/* 📑 Estilos do menu */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background-color: #e6e6e6;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-container h1 {
+    font-size: 28px;
+    color: #23338c;
+    margin-bottom: 20px;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-buttons button {
+    width: 100%;
+    background-color: #23338c;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-buttons button:hover {
+    background-color: #2e40a6;
+}
+
+.contraste-ativo .menu-buttons button {
+    background-color: #D8B923;
+    color: #333;
+}
+
+.contraste-ativo .menu-buttons button:hover {
+    background-color: #C6A417;
+}

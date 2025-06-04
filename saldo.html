@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saldo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Aumenta a fonte do texto do saldo */
+      #valor-saldo {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+
+      /* Botão resetar saldo fixo no canto inferior direito */
+      #btn-resetar-saldo {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          padding: 10px 15px;
+          background-color: #007bff;
+          border: none;
+          color: white;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+          z-index: 1000;
+      }
+
+      #btn-resetar-saldo:hover {
+          background-color: #0056b3;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma" />
+        </div>
+
+        <!-- Seção de Saldo -->
+        <div class="form-section">
+            <h1>💼 Saldo</h1>
+            <p id="valor-saldo">Seu saldo atual é: R$ <span id="saldo-atual">--</span></p>
+
+            <!-- Botão Voltar ao Login -->
+            <div class="menu-buttons" style="margin-top: 20px;">
+                <button id="btn-voltar-login" onclick="window.location.href='menu.html'">🔙 Voltar ao Menu</button>
+            </div>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+
+        <!-- Botão Resetar Saldo fixo -->
+        <button id="btn-resetar-saldo" title="Resetar Saldo">♻️ Resetar Saldo</button>
+    </div>
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="saldo.js"></script>
+</body>
+</html>

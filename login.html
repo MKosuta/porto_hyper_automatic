@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login Acessibilidade</title>
+
+    <script>
+      (function() {
+        const currentHost = window.location.hostname;
+        if (currentHost === '127.0.0.1') {
+          const newUrl = window.location.href.replace('127.0.0.1', 'localhost');
+          window.location.replace(newUrl);
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- face-api.js via CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+    <!-- Seus scripts -->
+    <script defer src="login.js"></script>
+    <script defer src="biometria.js"></script>
+    <script defer src="reconhecimentofacial.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo do Banco" />
+        </div>
+        <div class="form-section">
+            <h1>Login</h1>
+            <form id="login-form">
+                <div class="input-box">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required maxlength="14" />
+                    <span id="cpf-contagem">0/14</span>
+                </div>
+                <div class="input-box">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required maxlength="4" />
+                    <span id="senha-contagem">0/4</span>
+                </div>
+                <div class="actions">
+                    <button type="submit" id="btn-login">Acessar</button>
+                </div>
+                <div class="actions" style="display: flex; gap: 10px;">
+                    <button type="button" id="btn-biometria">🛂 Biometria</button>
+                    <button type="button" id="btn-cadastrar-biometria">🆕 Cadastrar Biometria</button>
+                    <button type="button" id="btn-reconhecimento-facial">🤳 Reconhecimento Facial</button>
+                    <button type="button" id="btn-cadastrar-rosto">📷 Cadastrar Rosto</button>
+                </div>
+            </form>
+            <div class="accessibility">
+                <button id="btn-falar">🔊 Ler formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <!-- Câmera oculta para reconhecimento facial -->
+    <video id="video" width="320" height="240" autoplay muted style="display: none;"></video>
+</body>
+</html>

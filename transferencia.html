@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Transferência</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Imagem / Logo -->
+        <div class="image-section">
+            <img src="hyper-automatic-logo.png" alt="Logo da Plataforma" />
+        </div>
+
+        <!-- Seção da Transferência -->
+        <div class="form-section">
+            <h1>Transferência</h1>
+
+            <!-- Banco -->
+            <div class="input-box">
+                <label for="banco-destino">Banco</label>
+                <input type="text" id="banco-destino" placeholder="Código do Banco (ex: 001)" />
+            </div>
+
+            <!-- Agência -->
+            <div class="input-box">
+                <label for="agencia-destino">Agência</label>
+                <input type="text" id="agencia-destino" placeholder="Número da Agência" />
+            </div>
+
+            <!-- Conta Corrente -->
+            <div class="input-box">
+                <label for="conta-destino">Conta Corrente</label>
+                <input type="text" id="conta-destino" placeholder="Conta com dígito (ex: 123456-7)" />
+            </div>
+
+            <!-- Valor -->
+            <div class="input-box">
+                <label for="valor">Valor</label>
+                <div class="valor-container">
+                    <input type="text" id="valor" placeholder="Valor da transferência" />
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="actions">
+                <button id="btn-transferir">Transferir</button>
+            </div>
+            <div class="actions">
+                <button onclick="window.location.href='menu.html'">🔙 Voltar ao Menu</button>
+            </div>
+
+            <!-- Acessibilidade -->
+            <div class="accessibility">
+                <button id="btn-ler-formulario">🔊 Ler Formulário</button>
+                <button id="btn-contraste">🌙 Modo Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+    <!-- VLibras container -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras script -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <script src="transferencia.js"></script>
+</body>
+</html>
